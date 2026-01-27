@@ -4,13 +4,19 @@
       "android": {
         "buildType": "apk"
       },
-      "node": "20.10.0"
+      "node": "20.10.0",
+      "env": {
+        "EAS_BUILD_SKIP_PNPM_FROZEN_LOCKFILE": "1"
+      }
     },
     "production": {
       "android": {
         "buildType": "apk"
       },
-      "node": "20.10.0"
+      "node": "20.10.0",
+      "env": {
+        "EAS_BUILD_SKIP_PNPM_FROZEN_LOCKFILE": "1"
+      }
     }
   }
 }
