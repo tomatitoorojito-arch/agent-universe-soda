@@ -5,7 +5,7 @@
   "license": "MIT",
   "engines": {
     "node": ">=18.0.0",
-    "pnpm": ">=9.0.0"
+    "pnpm": ">=8.0.0"
   },
   "scripts": {
     "dev": "NODE_ENV=development tsx watch server/_core/index.ts",
@@ -111,7 +111,6 @@
     "vite-plugin-manus-runtime": "^0.0.57",
     "vitest": "^2.1.4"
   },
-  "packageManager": "pnpm@9.0.0",
   "pnpm": {
     "patchedDependencies": {
       "wouter@3.7.1": "patches/wouter@3.7.1.patch"
