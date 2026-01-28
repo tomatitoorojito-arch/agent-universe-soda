@@ -1,11 +1,10 @@
 #!/bin/bash
-echo "🚀 Preparando entorno de construcción..."
+echo "🚀 Limpiando y preparando entorno..."
 
-# Forzar la instalación de pnpm 9.0.0 globalmente
-npm install -g pnpm@9.0.0
+# Eliminar cualquier rastro de lockfile que haya quedado
+rm -f pnpm-lock.yaml package-lock.json yarn.lock
 
-# Activar corepack y preparar la versión específica
-corepack enable
-corepack prepare pnpm@9.0.0 --activate
+# Instalar pnpm 9 si es posible, pero no fallar si no se puede
+npm install -g pnpm@9.0.0 || echo "⚠️ No se pudo instalar pnpm 9, usando el del sistema"
 
-echo "✅ Entorno listo. Versión de pnpm: $(pnpm -v)"
+echo "✅ Entorno listo para instalación limpia"
