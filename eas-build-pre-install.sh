@@ -1,10 +1,11 @@
 #!/bin/bash
-echo "🚀 Limpiando y preparando entorno..."
+echo "🚀 Preparando entorno de construcción para Expo..."
 
-# Eliminar cualquier rastro de lockfile que haya quedado
-rm -f pnpm-lock.yaml package-lock.json yarn.lock
+# Asegurar que estamos usando pnpm v8 para máxima compatibilidad con el lockfile generado
+npm install -g pnpm@8.15.4
 
-# Instalar pnpm 9 si es posible, pero no fallar si no se puede
-npm install -g pnpm@9.0.0 || echo "⚠️ No se pudo instalar pnpm 9, usando el del sistema"
+# Habilitar corepack y preparar la versión
+corepack enable
+corepack prepare pnpm@8.15.4 --activate
 
-echo "✅ Entorno listo para instalación limpia"
+echo "✅ pnpm configurado: $(pnpm -v)"
