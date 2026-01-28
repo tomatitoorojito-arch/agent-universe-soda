@@ -10,6 +10,11 @@
       "resizeMode": "contain",
       "backgroundColor": "#1a1a2e"
     },
+    "extra": {
+      "eas": {
+        "projectId": "af8da0df-5e47-4b38-b9a3-076279b5c3b9"
+      }
+    },
     "ios": {
       "supportsTabletMode": true,
       "bundleIdentifier": "com.agentuniverseai.app"
