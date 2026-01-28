@@ -2,6 +2,7 @@
   "expo": {
     "name": "AgentUniverse",
     "slug": "agent-universe",
+    "owner": "tomatitoo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./client/public/icon.png",
