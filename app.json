@@ -17,7 +17,6 @@
       }
     },
     "ios": {
-      "supportsTabletMode": true,
       "bundleIdentifier": "com.agentuniverseai.app"
     },
     "android": {
