@@ -15,6 +15,7 @@ export const API_KEYS = {
   OPENCODE_API_KEY: process.env.OPENCODE_API_KEY || "TU_CLAVE_AQUI",
   DEEPSEEK_API_KEY: process.env.DEEPSEEK_API_KEY || "TU_CLAVE_AQUI",
   GOOGLE_TTS_API_KEY: process.env.GOOGLE_TTS_API_KEY || "TU_CLAVE_AQUI",
+  SKYVERN_API_KEY: process.env.SKYVERN_API_KEY || "TU_CLAVE_AQUI",
 };
 
 export const API_URLS = {
@@ -27,6 +28,7 @@ export const API_URLS = {
   CLAWDBOT: "https://api.clawd.bot/v1",
   OPENCODE: "https://api.opencode.ai/v1",
   DEEPSEEK: "https://api.deepseek.com/v1",
+  SKYVERN: "https://api.skyvern.com/v1",
 };
 
 export const MODEL_SELECTION = {

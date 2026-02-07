@@ -12,6 +12,7 @@ import { clawdbotService } from "./clawdbotService";
 import { cloudBrowserService } from "./cloudBrowserService";
 import { fileSystemService } from "./fileSystemService";
 import { externalIntegrationService } from "./externalIntegrationService";
+import { skyvernService } from "./skyvernService";
 
 export interface TaskExecutionResult {
   success: boolean;
@@ -229,6 +230,11 @@ export class AgentOrchestrator {
       tools.push("integration_github");
     }
 
+    // Herramientas de Skyvern
+    if (lowerCaseTask.includes("skyvern") || lowerCaseTask.includes("navegación inteligente") || lowerCaseTask.includes("automatización web compleja")) {
+      tools.push("skyvern");
+    }
+
     return [...new Set(tools)];
   }
 
@@ -305,6 +311,14 @@ export class AgentOrchestrator {
         case "integration_github":
           console.log("🐙 [Tools] Integration: GitHub...");
           data = await externalIntegrationService.readGithubRepo("user", "repo");
+          break;
+
+        case "skyvern":
+          console.log("🤖 [Tools] Skyvern: Navegacion inteligente...");
+          data = await skyvernService.navigateAndExtract(
+            "https://example.com",
+            taskDescription
+          );
           break;
 
         default:
